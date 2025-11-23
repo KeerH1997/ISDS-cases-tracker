@@ -13,24 +13,34 @@
             <nav>
                 <a href="index.html">Home</a>|
                 <a href="index.html#publications">Research Outputs</a>|
-                <a href="case_data.html">Case Data</a>|  <a href="resources.html">Resources</a>|
+                <a href="case_data.html">Case Data</a>|
+                <a href="resources.html">Resources</a>|
             </nav>
         </header>
 
         <main id="single-column-content" style="padding: 40px; min-height: 800px;">
             <article class="content-section">
                 <h2 style="margin-top: 0;">📈 China-Related ISDS Case Tracker</h2>
-                <p>本追踪器收录并展示了与中国相关的 ISDS 仲裁案例信息，数据实时更新，仅供查看。</p>
                 
-                <iframe 
-                    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxF2JJi6Svo3wzn6R79TWn-pPFRtDThzlyEFs5h1U0FnU9egIzykbVayEw_wPhrDjE8f2SupCbxF0j/pubhtml?gid=31437704&single=true" 
-                    width="100%" 
-                    height="1200"            frameborder="0" 
-                    allowfullscreen="true" 
-                    mozallowfullscreen="true" 
-                    webkitallowfullscreen="true">
-                </iframe>
+                <p>This tracker monitors and displays information on China-related ISDS arbitration cases. The data is updated in real-time and is provided for viewing purposes only.</p>
                 
+                <div style="
+                    overflow: hidden; 
+                    transform: scale(0.9); 
+                    transform-origin: top left;
+                    /* 调整容器高度以适应缩小后的表格 */
+                    height: 1080px; /* 1200px * 0.9 = 1080px */
+                ">
+                    <iframe 
+                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxF2JJi6Svo3wzn6R79TWn-pPFRtDThzlyEFs5h1U0FnU9egIzykbVayEw_wPhrDjE8f2SupCbxF0j/pubhtml?gid=31437704&single=true" 
+                        width="100%" 
+                        height="1200" 
+                        frameborder="0" 
+                        allowfullscreen="true" 
+                        mozallowfullscreen="true" 
+                        webkitallowfullscreen="true">
+                    </iframe>
+                </div>
             </article>
         </main>
 
