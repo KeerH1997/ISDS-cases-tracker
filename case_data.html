@@ -1,52 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>China-Related ISDS Cases Tracker | HOME</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>China-Related ISDS Cases Tracker | Case Data</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div id="wrapper">
-        <header id="header">
-            <h1> China-Related ISDS Cases Tracker</h1>
-            <nav>
-                <a href="https://keerh1997.github.io/ISDS-cases-tracker/">Home</a>|
-                <a href="case_data.html">Case Data</a>|
-                <a href="resources.html">Resources</a>|
-                <a href="#publications">Research Outputs</a>|
-            </nav>
-        </header>
-
-        <main id="single-column-content" style="padding: 40px; min-height: 800px;">
-            <article class="content-section">
-                <h2 style="margin-top: 0;">📈 China-Related ISDS Case Tracker</h2>
-                
-                <p>This tracker monitors and displays information on China-related ISDS arbitration cases. The data is updated in real-time and is provided for viewing purposes only.</p>
-                
-                <div style="
-                    overflow: hidden; 
-                    transform: scale(0.9); 
-                    transform-origin: top left;
-                    /* 调整容器高度以适应缩小后的表格 */
-                    height: 1080px; /* 1200px * 0.9 = 1080px */
-                ">
-                    <iframe 
-                        src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxF2JJi6Svo3wzn6R79TWn-pPFRtDThzlyEFs5h1U0FnU9egIzykbVayEw_wPhrDjE8f2SupCbxF0j/pubhtml?gid=31437704&single=true" 
-                        width="100%" 
-                        height="1200" 
-                        frameborder="0" 
-                        allowfullscreen="true" 
-                        mozallowfullscreen="true" 
-                        webkitallowfullscreen="true">
-                    </iframe>
-                </div>
-            </article>
-        </main>
-
-        <footer id="footer">
-            <p>&copy; 2025 Keer Huang @ Wuhan University. All rights reserved.</p>
-        </footer>
+  <header>
+    <div class="nav">
+      <h1>China-Related ISDS Cases Tracker</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="case_data.html">Case Data</a>
+        <a href="resources.html">Resources</a>
+        <a href="index.html#publications">Research Outputs</a>
+      </nav>
     </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-heading">
+        <h2>📈 China-Related ISDS Case Tracker</h2>
+        <span>LIVE DATASET</span>
+      </div>
+      <p class="intro">
+        This interactive table monitors China-related Investor-State Dispute Settlement (ISDS) cases. It refreshes automatically from the curated Google Sheets dataset; use the filters and search inside the embedded sheet for detailed exploration.
+      </p>
+
+      <div class="card iframe-shell">
+        <iframe
+          src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTxF2JJi6Svo3wzn6R79TWn-pPFRtDThzlyEFs5h1U0FnU9egIzykbVayEw_wPhrDjE8f2SupCbxF0j/pubhtml?gid=31437704&single=true"
+          width="100%"
+          height="1100"
+          frameborder="0"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Keer Huang @ Wuhan University. All rights reserved.</p>
+  </footer>
 </body>
 </html>
