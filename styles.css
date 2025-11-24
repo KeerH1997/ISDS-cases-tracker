@@ -270,3 +270,14 @@ footer {
     text-align: center;
   }
 }
+
+.iframe-shell {
+  padding: 0;
+  overflow: hidden;
+}
+
+.iframe-shell iframe {
+  display: block;
+  border: none;
+  border-radius: var(--radius);
+}
