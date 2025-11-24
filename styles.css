@@ -244,21 +244,27 @@ footer {
   font-size: 0.95rem;
 }
 
-.profile-pic {
-  width: 110px;          /* 依需要调节 90–120px */
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--line);
-  margin-bottom: 18px;
+.profile {
+  font-family: "Merriweather", "Songti SC", serif;
+  text-align: center;
 }
 
-@media (max-width: 600px) {
-  .profile-pic {
-    width: 80px;
-    height: 80px;
-  }
+.profile h2,
+.profile p,
+.profile a {
+  font-family: inherit;
 }
+
+.profile-pic {
+  width: 140px;      /* 略大一些，可按需调 */
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid var(--line);
+  margin: 0 auto 18px;
+}
+
+
   .section-heading {
     flex-direction: column;
     align-items: flex-start;
