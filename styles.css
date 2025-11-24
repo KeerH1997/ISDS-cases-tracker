@@ -1,146 +1,175 @@
-/* 风格六：现代学术质感 (Modern Academic Texture) */
+/*
+ * 商务专业风格 CSS
+ * 主题色：深海军蓝与炭黑，强调清晰、信任和数据专业性
+ */
 
-/* 核心变量定义 (方便后续修改颜色) */
-:root {
-    --color-primary: #37474F; /* 深蓝灰色 (Slate Grey) */
-    --color-accent: #81A1C1; /* 柔和蓝色 (Accent Blue) */
-    --color-background: #FAF8F6; /* 亚麻米白色 (Paper-like background) */
-    --color-text: #212121; /* 几乎纯黑的深色文本 */
-    --font-serif: 'Palatino', 'Georgia', serif;
-    --font-sans: 'Helvetica Neue', Arial, sans-serif;
-}
-
-/* 基础设置 */
+/* 1. 全局样式和字体设置 - 极简主义和专业字体 */
 body {
-    font-family: var(--font-sans); 
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; /* 现代商务常用字体 */
+    line-height: 1.5;
     margin: 0;
     padding: 0;
-    line-height: 1.75;
-    background-color: var(--color-background); 
-    color: var(--color-text);
-    font-size: 16px;
+    color: #333333; /* 炭黑色文字 */
+    background-color: #F8F8F8; /* 极浅的灰色背景，提升内容区域的对比度 */
+    min-height: 100vh;
 }
 
-#wrapper {
-    width: 90%;
-    max-width: 1100px;
-    margin: 40px auto;
-    background-color: white;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* 柔和阴影 */
-    border: 1px solid #e0e0e0;
+/* 容器居中与内边距 */
+.container {
+    max-width: 1280px; /* 宽度稍宽，显得更“大气” */
+    margin: 0 auto;
+    padding: 30px 20px;
 }
 
-/* 头部样式：简洁高雅的标题 */
-#header {
-    background: white;
-    color: var(--color-primary);
-    padding: 35px 50px 20px 50px;
-    border-bottom: 3px double #e0e0e0; /* 双线分隔符，增加书面感 */
-}
-
-#header h1 {
-    margin: 0;
-    font-size: 2.4em;
-    font-family: var(--font-serif); /* 标题使用衬线字体 */
-    font-weight: normal;
-    letter-spacing: 0.5px;
-}
-
-#header nav {
-    margin-top: 15px;
-}
-
-#header nav a {
-    color: var(--color-primary);
-    margin: 0 20px 0 0;
-    text-decoration: none;
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 3px;
-    transition: border-bottom 0.3s;
-}
-
-#header nav a:hover {
-    border-bottom: 2px solid var(--color-accent);
-}
-
-/* 主布局：两栏结构 */
-#main-layout {
-    display: flex;
-    padding: 30px 0;
-}
-
-/* 侧边栏 (Sidebar) */
-#sidebar {
-    flex: 0 0 280px;
-    padding: 0 20px 20px 50px;
-    background-color: #FDFDFD; /* 侧边栏使用略微不同的白色 */
-    border-right: 1px solid #f0f0f0;
-    font-size: 0.95em;
-}
-
-.card {
-    background: transparent;
-    padding: 0;
+/* 2. 导航栏 (Navbar) - 专业而沉稳 */
+.navbar {
+    background-color: #1C3A5E; /* 主色调：深海军蓝，非常商务 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 明确的阴影，增加层次感 */
+    padding: 20px 0;
     margin-bottom: 30px;
+}
+
+.navbar h1 {
+    font-size: 28px;
+    font-weight: 700; /* 标题加粗 */
+    color: #FFFFFF; /* 白色标题 */
+    margin: 0;
+}
+
+/* 导航链接 */
+.nav-link {
+    color: #A9C3E3; /* 浅蓝色链接，与深色背景形成对比 */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 0 20px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #FFFFFF; /* 悬停时变为纯白，清晰引导 */
+}
+
+/* 3. 搜索和筛选区域 - 模块化设计 */
+.search-filter-section {
+    background-color: #FFFFFF; /* 纯白底色，保持模块清晰 */
+    padding: 25px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    border: 1px solid #E5E5E5; /* 干净的边框分隔 */
+}
+
+/* 输入框和下拉菜单 */
+.search-filter-section input[type="text"],
+.search-filter-section select {
+    padding: 10px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    margin-right: 15px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.search-filter-section input[type="text"]:focus,
+.search-filter-section select:focus {
+    border-color: #1C3A5E; /* 焦点色：主色调海军蓝 */
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(28, 58, 94, 0.2); /* 柔和的焦点光环 */
+}
+
+/* 按钮样式 - 强调行动 */
+.btn-primary {
+    background-color: #1C3A5E; /* 主按钮色：海军蓝 */
+    color: white;
+    padding: 10px 20px;
     border: none;
-    box-shadow: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.3s;
 }
 
-.profile-pic {
-    width: 100px;
-    height: 100px;
-    border-radius: 5px; /* 略微圆角 */
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.08);
+.btn-primary:hover {
+    background-color: #2D588C; /* 悬停时稍微变亮 */
 }
 
-.profile h2 {
-    font-family: var(--font-serif);
-    color: var(--color-primary);
-    font-size: 1.5em;
+/* 4. 表格样式 - 数据至上，高可读性 */
+.table-responsive {
+    overflow-x: auto;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* 明确的模块阴影 */
+    border: 1px solid #DDDDDD; /* 干净的外部边框 */
 }
 
-.quick-links h3 {
-    color: #616161; /* 柔和的标题色 */
-    text-transform: uppercase;
-    font-size: 0.9em;
-    border-bottom: 1px dashed #ccc;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+.case-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
 }
 
-.quick-links a {
-    color: var(--color-primary);
+/* 表格头部 (Headers) - 强烈的视觉分隔 */
+.case-table thead th {
+    background-color: #EFEFEF;
+    color: #1C3A5E; /* 头部文字使用海军蓝 */
+    font-weight: 700;
+    text-align: left;
+    padding: 14px 15px;
+    border-bottom: 3px solid #1C3A5E; /* 粗而深的分隔线 */
+}
+
+/* 表格行 (Rows) */
+.case-table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #EEEEEE;
+    vertical-align: middle;
+}
+
+/* 斑马线 (Zebra Striping) - 提高数据行可读性 */
+.case-table tbody tr:nth-child(even) {
+    background-color: #F9F9F9; /* 浅灰色斑马线 */
+}
+
+/* 鼠标悬停时的效果 */
+.case-table tbody tr:hover {
+    background-color: #EFEFFC; /* 鼠标悬停时轻微变蓝 */
+}
+
+/* 5. 状态标签 (Tags) - 清晰区分状态 */
+
+/* 示例：如果你有状态标签，可以定义其样式 */
+.status-tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px; /* 药丸形状，更现代 */
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* 假设状态是 Completed */
+.status-completed {
+    background-color: #D6E8D6; /* 柔和的成功绿 */
+    color: #216E21;
+}
+
+/* 假设状态是 Pending */
+.status-pending {
+    background-color: #FFE6CC; /* 柔和的警告橙 */
+    color: #A05200;
+}
+
+/* 假设状态是 Disputed */
+.status-disputed {
+    background-color: #FFD6D6; /* 柔和的警示红 */
+    color: #A32020;
+}
+
+/* 链接颜色 */
+a {
+    color: #1C3A5E; /* 所有链接都使用海军蓝 */
     text-decoration: none;
 }
 
-/* 主要内容区 (Content) */
-#content {
-    flex-grow: 1;
-    padding: 0 50px 20px 50px;
-}
-
-.content-section {
-    margin-bottom: 50px;
-}
-
-.content-section h2 {
-    color: var(--color-primary);
-    font-family: var(--font-serif);
-    font-size: 2em;
-    margin-top: 0;
-    border-bottom: 1px solid var(--color-accent); /* 强调色作为底线 */
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-}
-
-/* 底部样式 */
-#footer {
-    text-align: center;
-    padding: 18px;
-    background-color: #f5f5f5; /* 略深底部 */
-    color: #757575;
-    font-size: 0.85em;
-    border-top: 1px solid #e0e0e0;
+a:hover {
+    text-decoration: underline;
 }
