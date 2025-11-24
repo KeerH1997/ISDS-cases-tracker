@@ -245,8 +245,8 @@ footer {
 }
 
 .profile {
-  font-family: "Merriweather", "Songti SC", serif;
-  text-align: center;
+  font-family: "Inter", "Source Han Sans", system-ui, sans-serif;
+  text-align: left;
 }
 
 .profile h2,
@@ -256,12 +256,12 @@ footer {
 }
 
 .profile-pic {
-  width: 140px;      /* 略大一些，可按需调 */
-  height: 140px;
-  border-radius: 12px;
+  width: 110px;   /* 更小，如需再缩小可调 90–100 */
+  height: 110px;
+  border-radius: 10px;
   object-fit: cover;
-  border: 2px solid var(--line);
-  margin: 0 auto 18px;
+  border: 1px solid var(--line);
+  margin: 0 0 14px;
 }
 
 
